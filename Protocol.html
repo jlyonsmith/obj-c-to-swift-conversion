@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | The Guide to Objective-C to Swift Conversion</title>
+        <title>Conversion of `@protocol` | The Guide to Objective-C to Swift Conversion</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Guidance and step-by-step instructions on converting projects from Objective-C to Swift">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./One-File.html" />
+    <link rel="next" href="./Interface-Methods.html" />
     
+    
+    <link rel="prev" href="./Typedef.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="README.md"
+        data-level="8"
+        data-chapter-title="Conversion of `@protocol`"
+        data-filepath="Protocol.md"
         data-basepath="."
         data-revision="Thu Dec 03 2015 15:20:59 GMT-0800 (PST)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -185,7 +187,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="Protocol.html">
+        <li class="chapter active" data-level="8" data-path="Protocol.html">
             
                 
                     <a href="./Protocol.html">
@@ -278,7 +280,20 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>This is a guide book to help you in the conversion of projects from Objective-C to Swift.</p>
+                        <p>Convert as follows:</p>
+<pre><code class="lang-obj-c"><span class="hljs-class"><span class="hljs-keyword">@protocol</span> <span class="hljs-title">ImagePathHelperProtocol</span></span>
+    - (<span class="hljs-built_in">NSURL</span>*)buildUrlForImage:(<span class="hljs-keyword">id</span>&lt;ImageProtocol&gt;)image sizeType:(ImageSize)sizeType;
+    - (<span class="hljs-built_in">NSURL</span>*)buildUrlForImagePath:(<span class="hljs-built_in">NSString</span>*)path withHash:(<span class="hljs-built_in">NSString</span>*)hash sizeType:(ImageSize)sizeType;
+    - (<span class="hljs-built_in">NSString</span>*)getSizeString:(ImageSize)sizeType;
+<span class="hljs-keyword">@end</span>
+</code></pre>
+<p>becomes:</p>
+<pre><code class="lang-swift"><span class="hljs-preprocessor">@objc</span> <span class="hljs-class"><span class="hljs-keyword">protocol</span> <span class="hljs-title">RSImagePathHelperProtocol</span> </span>{
+    <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">buildUrl</span><span class="hljs-params">(image: ImageProtocol, sizeType: RSImageSize)</span></span> -&gt; <span class="hljs-type">NSURL</span>
+    <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">buildUrl</span><span class="hljs-params">(imagePath path: String, withHash hash: String, sizeType: RSImageSize)</span></span> -&gt; <span class="hljs-type">NSURL</span>
+    <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">getSizeString</span><span class="hljs-params">(sizeType: RSImageSize)</span></span> -&gt; <span class="hljs-type">NSString</span>
+}
+</code></pre>
 
                     
                     </section>
@@ -289,8 +304,10 @@
         </div>
 
         
+        <a href="./Typedef.html" class="navigation navigation-prev " aria-label="Previous page: Conversion of `typedef`"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./One-File.html" class="navigation navigation-next navigation-unique" aria-label="Next page: One File at a Time"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./Interface-Methods.html" class="navigation navigation-next " aria-label="Next page: Conversion of `@interface` Methods"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | The Guide to Objective-C to Swift Conversion</title>
+        <title>One File at a Time | The Guide to Objective-C to Swift Conversion</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Guidance and step-by-step instructions on converting projects from Objective-C to Swift">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./One-File.html" />
+    <link rel="next" href="./Search-Replace.html" />
     
+    
+    <link rel="prev" href="./index.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="README.md"
+        data-level="1"
+        data-chapter-title="One File at a Time"
+        data-filepath="One-File.md"
         data-basepath="."
         data-revision="Thu Dec 03 2015 15:20:59 GMT-0800 (PST)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -80,7 +82,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1" data-path="One-File.html">
+        <li class="chapter active" data-level="1" data-path="One-File.html">
             
                 
                     <a href="./One-File.html">
@@ -278,7 +280,17 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>This is a guide book to help you in the conversion of projects from Objective-C to Swift.</p>
+                        <p>Convert the code one file at a time.  If you code base is following conventions then you will generally have one Objective-C class per file, with maybe some enumerations and protocols hitching a ride as well.</p>
+<p>In general the approach to conversion is:</p>
+<ol>
+<li>Create a new <code>.swift</code> file with the same name as the Objective-C <code>.m</code> file (or the <code>.h</code> file if no <code>.m</code>)  Drag files around in Xcode so that the <code>.m</code>, <code>.h</code> and <code>.swift</code> files are next to each other.</li>
+<li>Copy the Objective-C code from <em>both</em> the <code>.h</code> and the <code>.m</code> file into the <code>.swift</code> file.  Consider it a framework for the conversion.</li>
+<li>Convert the Objective-C code into Swift until you see no red dots or yellow triangles in Xcode.</li>
+<li>Delete the old <code>.h</code> and <code>.m</code> files (they are recoverable from source code control, right?)</li>
+<li>Compile and fix any introduced bridging problems.</li>
+<li>Run tests and commit</li>
+</ol>
+<p>Then move to the next file. Easy.</p>
 
                     
                     </section>
@@ -289,8 +301,10 @@
         </div>
 
         
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./One-File.html" class="navigation navigation-next navigation-unique" aria-label="Next page: One File at a Time"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./Search-Replace.html" class="navigation navigation-next " aria-label="Next page: Search/Replace"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

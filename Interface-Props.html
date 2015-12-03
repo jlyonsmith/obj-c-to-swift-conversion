@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | The Guide to Objective-C to Swift Conversion</title>
+        <title>Conversion of `@interface` Properties | The Guide to Objective-C to Swift Conversion</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Guidance and step-by-step instructions on converting projects from Objective-C to Swift">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./One-File.html" />
+    <link rel="next" href="./Implementation.html" />
     
+    
+    <link rel="prev" href="./Interface-Methods.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="README.md"
+        data-level="10"
+        data-chapter-title="Conversion of `@interface` Properties"
+        data-filepath="Interface-Props.md"
         data-basepath="."
         data-revision="Thu Dec 03 2015 15:20:59 GMT-0800 (PST)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -215,7 +217,7 @@
             
         </li>
     
-        <li class="chapter " data-level="10" data-path="Interface-Props.html">
+        <li class="chapter active" data-level="10" data-path="Interface-Props.html">
             
                 
                     <a href="./Interface-Props.html">
@@ -278,7 +280,17 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>This is a guide book to help you in the conversion of projects from Objective-C to Swift.</p>
+                        <p>Convert the following:</p>
+<pre><code class="lang-obj-c"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">ImagePathHelper</span> ()</span>
+
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, retain) <span class="hljs-built_in">NSString</span>* domain;
+
+<span class="hljs-keyword">@end</span>
+</code></pre>
+<p>into:</p>
+<pre><code class="lang-swift">    <span class="hljs-keyword">let</span> domain: <span class="hljs-type">String</span>
+</code></pre>
+<p>Alternatively, use <code>var</code> if the property will be modified outside of the initializer.  You can also make the property <code>private</code> or <code>internal</code> if desired.</p>
 
                     
                     </section>
@@ -289,8 +301,10 @@
         </div>
 
         
+        <a href="./Interface-Methods.html" class="navigation navigation-prev " aria-label="Previous page: Conversion of `@interface` Methods"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./One-File.html" class="navigation navigation-next navigation-unique" aria-label="Next page: One File at a Time"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./Implementation.html" class="navigation navigation-next " aria-label="Next page: Conversion of `@implementation`"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

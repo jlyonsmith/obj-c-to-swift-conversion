@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | The Guide to Objective-C to Swift Conversion</title>
+        <title>Search/Replace | The Guide to Objective-C to Swift Conversion</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Guidance and step-by-step instructions on converting projects from Objective-C to Swift">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./One-File.html" />
+    <link rel="next" href="./Type-Conversions.html" />
     
+    
+    <link rel="prev" href="./One-File.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="README.md"
+        data-level="2"
+        data-chapter-title="Search/Replace"
+        data-filepath="Search-Replace.md"
         data-basepath="."
         data-revision="Thu Dec 03 2015 15:20:59 GMT-0800 (PST)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -95,7 +97,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="Search-Replace.html">
+        <li class="chapter active" data-level="2" data-path="Search-Replace.html">
             
                 
                     <a href="./Search-Replace.html">
@@ -278,7 +280,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>This is a guide book to help you in the conversion of projects from Objective-C to Swift.</p>
+                        <p>Before getting stuck into the tricky stuff, there is some easy search/replaces you can do that will help:</p>
+<ul>
+<li>Remove any <code>;</code> at the end of lines, e.g. use regular expression find <code>;\s*$)</code> and replace with empty string.</li>
+<li>Remove instance methods <code>-</code>, e.g. regular expression find <code>^\s*)-\s*</code> and replace with <code>$1func</code>.</li>
+</ul>
+<p>Also remove any <code>*</code>&apos;s because Swift doesn&apos;t need them to identify reference vs. value types.  This is hard to do safely with a regular expression because of the obvious confusion with the multiplication operator.  So do it manually and with care.</p>
 
                     
                     </section>
@@ -289,8 +296,10 @@
         </div>
 
         
+        <a href="./One-File.html" class="navigation navigation-prev " aria-label="Previous page: One File at a Time"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./One-File.html" class="navigation navigation-next navigation-unique" aria-label="Next page: One File at a Time"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./Type-Conversions.html" class="navigation navigation-next " aria-label="Next page: Type Conversions"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
