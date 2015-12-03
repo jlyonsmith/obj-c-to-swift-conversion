@@ -1,0 +1,35 @@
+{
+  "name": "obj-c-to-swift-conversion",
+  "version": "0.0.0",
+  "description": "A Guide to Objective-C to Swift Conversion",
+  "main": "./index.js",
+  "scripts": {
+    "generate-gitbook": "gitbook build ./content ./gh-pages",
+    "generate-wiki": "node ./bin/generate-wiki.js",
+    "deploy-gitbook": "node ./bin/deploy-gh-pages.js",
+    "deploy-wiki": "./bin/deploy-wiki.sh",
+    "generate-and-deploy": "npm run generate-gitbook && npm run generate-wiki && npm run deploy-gitbook && npm run deploy-wiki",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlyonsmith/obj-c-to-swift-conversion.git"
+  },
+  "keywords": [
+    "objective-c",
+    "swift"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlyonsmith/obj-c-to-swift-conversion/issues"
+  },
+  "homepage": "https://github.com/jlyosmith/obj-c-to-swift-conversion",
+  "dependencies": {
+    "async": "^0.9.0",
+    "fs-extra": "^0.18.2",
+    "gh-pages": "^0.2.0",
+    "gitbook-cli": "^0.3.3"
+  },
+  "devDependencies": {}
+}

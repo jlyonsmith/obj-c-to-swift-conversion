@@ -1,0 +1,6 @@
+{
+    "gitbook": ">=2.0.0",
+    "title": "The Guide to Objective-C to Swift Conversion",
+    "description": "Guidance and step-by-step instructions on converting projects from Objective-C to Swift",
+    "language": "en"
+}
