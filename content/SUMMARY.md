@@ -1,6 +1,6 @@
 # Navigation
 
-[Introduction](Intro.md)
+[Introduction](Home.md)
 
 * [One File at a Time](One-File.md)
 * [Search/Replace](Search-Replace.md)
