@@ -27,3 +27,7 @@ The generator converts the wiki content to Gitbook (standalone site). In this ca
 This should generate `/gh-pages`. You can serve that directory through some static server (ie. hit `serve` at `/gh-pages`).
 
 It is possible to deploy the book by hitting `npm run deploy-gitbook`. This will update `gh-pages` branch.
+
+## Credits
+
+The cool GitBook generation technology that this site uses I originally came across in the [React/Webpack Cookbook] (https://github.com/christianalfoni/react-webpack-cookbook)
