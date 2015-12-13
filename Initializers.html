@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>`#include` vs. Import | The Guide to Objective-C to Swift Conversion</title>
+        <title>Initializers | The Guide to Objective-C to Swift Conversion</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./Initializers.html" />
+    <link rel="next" href="./Methods.html" />
     
     
-    <link rel="prev" href="./Bridging.html" />
+    <link rel="prev" href="./Headers.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="5"
-        data-chapter-title="`#include` vs. Import"
-        data-filepath="Headers.md"
+        data-level="6"
+        data-chapter-title="Initializers"
+        data-filepath="Initializers.md"
         data-basepath="."
         data-revision="Sun Dec 13 2015 12:50:22 GMT-0800 (PST)"
         data-innerlanguage="">
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5" data-path="Headers.html">
+        <li class="chapter " data-level="5" data-path="Headers.html">
             
                 
                     <a href="./Headers.html">
@@ -157,7 +157,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="Initializers.html">
+        <li class="chapter active" data-level="6" data-path="Initializers.html">
             
                 
                     <a href="./Initializers.html">
@@ -295,16 +295,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>Typically, iOS code includes </p>
-<pre><code class="lang-obj-c"><span class="hljs-preprocessor">#import <span class="hljs-title">&lt;Foundation/Foundation.h&gt;</span></span>
+                        <p>Initializers declared in Swift code get exposed to Objective-C through the <code>Xxx-Swift.h</code> bridging header.  In Swift all initializers have the name <code>init</code>.  In Objective-C initializers are named (by convention) to include the name of the first parameter, e.g. <code>initWithHostname</code>.   Because of this, when the compiler generates the <code>Xxx-Swift.h</code> header, it will create an Objective-C friendly name for initializers.  So for example:</p>
+<pre><code class="lang-swift">  <span class="hljs-keyword">init</span>(hostname: <span class="hljs-type">String</span>) {
+
+  }
 </code></pre>
-<p>Which is roughly equivalent to:</p>
-<pre><code class="lang-swift"><span class="hljs-keyword">import</span> Foundation
-</code></pre>
-<p>One of the key things about Swift is that a single file is used for both exporting and implementation of classes.  So your Objective-C file is going to pretty much be irrelevent.  You can pretty much just copy your <code>.m</code> file and convert that to Swift.</p>
-<p>This means you can copy the <code>.m</code> file over to the <code>.swift</code> file and use that as the framework for conversion.  However, it is common for <code>.h</code> file to include enumerations and protocols, so you may need to copy those into the <code>.swift</code> file as well.</p>
-<h3 id="method-signatures">Method Signatures</h3>
-<p>The first place where you will spend the majority of your conversion typing time is with converting method signatures to their Swift equivalents.  Just about everything is different in Swift.</p>
+<p>Will get exported as <code>initWithHostname</code> to the header file.</p>
 
                     
                     </section>
@@ -315,10 +311,10 @@
         </div>
 
         
-        <a href="./Bridging.html" class="navigation navigation-prev " aria-label="Previous page: Bridging Headers"><i class="fa fa-angle-left"></i></a>
+        <a href="./Headers.html" class="navigation navigation-prev " aria-label="Previous page: `#include` vs. Import"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./Initializers.html" class="navigation navigation-next " aria-label="Next page: Initializers"><i class="fa fa-angle-right"></i></a>
+        <a href="./Methods.html" class="navigation navigation-next " aria-label="Next page: Method Signatures"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
