@@ -7,6 +7,7 @@
 * [Type Conversions](Type-Conversions.md)
 * [Bridging Headers](Bridging.md)
 * [`#include` vs. Import](Headers.md)
+* [Initializers](Initializers.md)
 * [Method Signatures](Methods.md)
 * [Conversion of `typedef`](Typedef.md)
 * [Conversion of `@protocol`](Protocol.md)
