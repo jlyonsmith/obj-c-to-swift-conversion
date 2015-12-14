@@ -7,3 +7,5 @@ Initializers declared in Swift code get exposed to Objective-C through the `Xxx-
 ```
 
 Will get exported as `initWithHostname` to the header file.
+
+`dealloc` in Objective-C maps to `deinit` in Swift.
