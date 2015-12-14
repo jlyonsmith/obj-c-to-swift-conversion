@@ -22,3 +22,5 @@ becomes:
 ```
 
 In Objective-C the enumerations will be available under their old names, as Swift bridges them as the enum name prefixed by the enum type name.
+
+The _raw value_ of the Swift enumeration is exposed to Objective-C, but only integer and floating point types can be used. 
