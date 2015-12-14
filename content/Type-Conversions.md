@@ -7,6 +7,7 @@ id               | AnyObject
 id\<Protocol\>   | Protocol
 NSInteger        | Int
 NSString         | String
+void*            | UnsafeMutablePointer<Void>
 
 Note that `instancetype` is only returned by Objective-C initializers.  Swift initializers do not return a value.
 
