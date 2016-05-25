@@ -1,4 +1,6 @@
-# obj-c-to-swift-conversion - A guide for converting projects from Objective-C to Swift
+# Objective C to Swift Conversion
+
+_A guide for converting projects from Objective-C to Swift_
 
 > [Go to cookbook](https://jlyonsmith.github.io/obj-c-to-swift-conversion/)
 
