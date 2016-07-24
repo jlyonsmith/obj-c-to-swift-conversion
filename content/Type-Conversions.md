@@ -6,9 +6,10 @@ instancetype     | N/A
 id               | AnyObject
 id\<Protocol\>   | Protocol
 NSInteger        | Int
+NSNumber         | NSNumber
 NSString         | String
 void*            | UnsafeMutablePointer<Void>
 
 Note that `instancetype` is only returned by Objective-C initializers.  Swift initializers do not return a value.
 
-If the type is `(weak)` in Objective-C make it `weak` and optional in Swift.
+If the type is `(weak)` in Objective-C make it `weak` and `optional` in Swift.
